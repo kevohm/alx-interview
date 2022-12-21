@@ -9,6 +9,7 @@ def factorial(n):
         return 1
     return n * factorial(n - 1)
 
+
 def combination(n, r):
     """calculating nCr"""
     top = factorial(n)
@@ -16,12 +17,14 @@ def combination(n, r):
     bottom = bottom * factorial(n - r)
     return math.floor(top / bottom)
 
+
 def getPascalRow(n):
     """Pascals values for n"""
     arr = []
     for i in range(0, n + 1):
         arr.append(combination(n, i))
     return arr
+
 
 def pascal_triangle(n):
     """returns a list of lists of integers"""
