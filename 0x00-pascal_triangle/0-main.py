@@ -13,4 +13,4 @@ def print_triangle(triangle):
 
 
 if __name__ == "__main__":
-    print_triangle(p(5))
+    print_triangle(p(6))
