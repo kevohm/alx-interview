@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Calculate the pascals's triangle"""
-import math
 
 
 def factorial(n):
@@ -15,7 +14,7 @@ def combination(n, r):
     top = factorial(n)
     bottom = factorial(r)
     bottom = bottom * factorial(n - r)
-    return math.floor(top / bottom)
+    return int(top / bottom)
 
 
 def getPascalRow(n):
