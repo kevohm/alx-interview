@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def getKeys(boxes):
     """get all keys"""
     checked = []
@@ -12,6 +13,7 @@ def getKeys(boxes):
                     checked.append(k)
     checked.sort()
     return checked
+
 
 def canUnlockAll(boxes):
     """determines if all the boxes can be opened"""
