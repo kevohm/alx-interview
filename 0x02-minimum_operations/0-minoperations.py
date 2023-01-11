@@ -1,19 +1,26 @@
 #!/usr/bin/python3
 """calculates the fewest number of operations needed to result
 in exactly n H characters in the file"""
+import math
 
+def factors(n):
+    """get factors"""
+    base =  int(math.sqrt(n))
+    factors = {}
+    for i in range(2, base + 1):
+        repeat = 1
+        while n % i == 0:
+            factors["{}".format(i)] = repeat
+            n = int(n / i)
+            repeat += 1
+    if n != 1:
+        factors["{}".format(n)] = 1
+    return factors
 
 def minOperations(n):
-    data = "H"
-    copy = ""
-    for i in range(1, n+1):
-        if len(data) == n:
-            return i
-        if len(copy) + len(data) == n:
-            return i
-        elif i % 3 == 1:
-            copy = data
-        else:
-            if len(copy) != 0:
-                data = copy + data
-    print(data)
+    """get min operations"""
+    f = factors(n)
+    0perations = 0
+    for k, v in f.items():
+        first = int(k)
+        Operation += first
