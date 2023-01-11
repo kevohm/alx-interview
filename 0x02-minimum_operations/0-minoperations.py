@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""calculates the fewest number of operations needed to result 
+"""calculates the fewest number of operations needed to result
 in exactly n H characters in the file"""
+
 
 def minOperations(n):
     data = "H"
@@ -10,7 +11,7 @@ def minOperations(n):
             return i
         if len(copy) + len(data) == n:
             return i
-        elif i%3 == 1:
+        elif i % 3 == 1:
             copy = data
         else:
             if len(copy) != 0:
