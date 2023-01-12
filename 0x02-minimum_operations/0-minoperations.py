@@ -20,7 +20,11 @@ def factors(n):
 def minOperations(n):
     """get min operations"""
     f = factors(n)
-    0perations = 0
+    operations = 0
     for k, v in f.items():
-        first = int(k)
-        Operation += first
+        operations += int(k)
+        if v > 1:
+            operations += v
+    return operations
+
+        
