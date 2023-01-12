@@ -3,9 +3,10 @@
 in exactly n H characters in the file"""
 import math
 
+
 def factors(n):
     """get factors"""
-    base =  int(math.sqrt(n))
+    base = int(math.sqrt(n))
     factors = {}
     for i in range(2, base + 1):
         repeat = 1
@@ -17,6 +18,7 @@ def factors(n):
         factors["{}".format(n)] = 1
     return factors
 
+
 def minOperations(n):
     """get min operations"""
     f = factors(n)
@@ -26,5 +28,3 @@ def minOperations(n):
         if v > 1:
             operations += v
     return operations
-
-        
