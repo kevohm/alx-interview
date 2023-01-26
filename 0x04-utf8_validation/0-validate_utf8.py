@@ -7,6 +7,8 @@ def validUTF8(data):
     """determines if a given data set represents a valid UTF-8 encoding
     """
     for i in data:
-        if len(bin(i)) > 10:
+        d = bin(i)
+        key = int(d[0:9], 2)
+        if i != key:
             return False
     return True
