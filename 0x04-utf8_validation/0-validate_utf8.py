@@ -8,7 +8,10 @@ def validUTF8(data):
     """
     for i in data:
         d = bin(i)
-        key = int(d[0:9], 2)
+        if i < 0:
+            key = int(d[0:10], 2)
+        else:
+            key = int(d[0:9], 2)
         if i != key:
             return False
     return True
