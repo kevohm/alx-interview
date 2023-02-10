@@ -8,7 +8,7 @@ if(error){
 	JSON.parse(body).characters.forEach(
 		(item)=>{
 			request(item, function(error, response, body){
-				if(error){console.log(error)}else{
+				if(!error){
 					console.log(JSON.parse(body).name)
 				}
 			})
