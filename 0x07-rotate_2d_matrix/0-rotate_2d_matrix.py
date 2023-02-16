@@ -2,6 +2,7 @@
 """Module 0-rotate_2d_matrix
 """
 
+
 def rotate_2d_matrix(matrix):
     """rotate a matrix by 90 deg
     """
@@ -13,6 +14,7 @@ def rotate_2d_matrix(matrix):
             temp[col][i] = matrix[row][col]
     copy_matrix(temp, matrix)
 
+
 def create_matrix(n):
     """creates n by n matrix
     """
@@ -22,6 +24,7 @@ def create_matrix(n):
         for j in range(n):
             my_list[i].append(0)
     return my_list
+
 
 def copy_matrix(current, old):
     """copy matrix to another
