@@ -8,7 +8,13 @@ def makeChange(coins, total):
     """
     coins.sort(reverse=True)
     div = 0
+    if total <= 0:
+        return 0
     for i in coins:
+        if not isinstance(i, int):
+            return -1
+        if i < 0:
+            return -1
         quotient = int(total / i)
         rem = total % i
         if (quotient > 0):
