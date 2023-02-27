@@ -2,6 +2,7 @@
 """the perimeter of the island described in grid
 """
 
+
 def island_perimeter(grid):
     p = 0
     height = len(grid)
