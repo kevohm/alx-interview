@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """the perimeter of the island described in grid
 """
 
