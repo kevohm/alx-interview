@@ -4,6 +4,8 @@
 
 
 def island_perimeter(grid):
+    """return island perimeter
+    """
     p = 0
     height = len(grid)
     for y in range(height):
